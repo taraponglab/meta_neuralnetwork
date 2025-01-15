@@ -312,6 +312,7 @@ def main():
         x_data = pd.read_csv(os.path.join(name, "SubFPC.csv"), index_col=0)
         evaluate_AD(stacked_model, stack_data_prob, x_data, name, z=1.0)
         print("Finish AD !")
+        print("Finish TPO_predict !")
 
 if __name__ == "__main__":
     main()
