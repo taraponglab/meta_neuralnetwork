@@ -1,4 +1,4 @@
-# **Stacking Ensemble Neural Network Model for Chemical Safety Screening: A Case Study of Thyroid Peroxidase and Natural Product Screening**
+# **Stacking Ensemble Neural Network for Chemical Safety Assessment: A Case Study of Thyroid Peroxidase and Natural Product Screening**
 
 ![Sample Figure](meta_neuralnet_graph.png)
 
