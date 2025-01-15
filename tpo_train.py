@@ -341,123 +341,123 @@ def stacked_class(name):
     yma_prob_bilstm_test, yma_pred_bilstm_test,  yma_metric_bilstm_test   = y_prediction(  baseline_model_bilstm_ma, xma_test_np_bilstm, xma_test, y_test,   "yma_pred_bilstm")
     
     # Train attention models
-    baseline_model_satt_at = simple_attention(fingerprint_length=xat_train.shape[1])
-    baseline_model_satt_es = simple_attention(fingerprint_length=xes_train.shape[1])
-    baseline_model_satt_ke = simple_attention(fingerprint_length=xke_train.shape[1])
-    baseline_model_satt_pc = simple_attention(fingerprint_length=xpc_train.shape[1])
-    baseline_model_satt_ss = simple_attention(fingerprint_length=xss_train.shape[1])
-    baseline_model_satt_cd = simple_attention(fingerprint_length=xcd_train.shape[1])
-    baseline_model_satt_cn = simple_attention(fingerprint_length=xcn_train.shape[1])
-    baseline_model_satt_kc = simple_attention(fingerprint_length=xkc_train.shape[1])
-    baseline_model_satt_ce = simple_attention(fingerprint_length=xce_train.shape[1])
-    baseline_model_satt_sc = simple_attention(fingerprint_length=xsc_train.shape[1])
-    baseline_model_satt_ac = simple_attention(fingerprint_length=xac_train.shape[1])
-    baseline_model_satt_ma = simple_attention(fingerprint_length=xma_train.shape[1])
-    baseline_model_satt_at.fit(xat_train_split, yat_train_split, validation_data=(xat_val_split, yat_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_es.fit(xes_train_split, yes_train_split, validation_data=(xes_val_split, yes_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_ke.fit(xke_train_split, yke_train_split, validation_data=(xke_val_split, yke_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_pc.fit(xpc_train_split, ypc_train_split, validation_data=(xpc_val_split, ypc_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_ss.fit(xss_train_split, yss_train_split, validation_data=(xss_val_split, yss_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_cd.fit(xcd_train_split, ycd_train_split, validation_data=(xcd_val_split, ycd_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_cn.fit(xcn_train_split, ycn_train_split, validation_data=(xcn_val_split, ycn_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_kc.fit(xkc_train_split, ykc_train_split, validation_data=(xkc_val_split, ykc_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_ce.fit(xce_train_split, yce_train_split, validation_data=(xce_val_split, yce_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_sc.fit(xsc_train_split, ysc_train_split, validation_data=(xsc_val_split, ysc_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_ac.fit(xac_train_split, yac_train_split, validation_data=(xac_val_split, yac_val_split), epochs=20, batch_size=32)
-    baseline_model_satt_ma.fit(xma_train_split, yma_train_split, validation_data=(xma_val_split, yma_val_split), epochs=20, batch_size=32)
+    baseline_model_att_at = simple_attention(fingerprint_length=xat_train.shape[1])
+    baseline_model_att_es = simple_attention(fingerprint_length=xes_train.shape[1])
+    baseline_model_att_ke = simple_attention(fingerprint_length=xke_train.shape[1])
+    baseline_model_att_pc = simple_attention(fingerprint_length=xpc_train.shape[1])
+    baseline_model_att_ss = simple_attention(fingerprint_length=xss_train.shape[1])
+    baseline_model_att_cd = simple_attention(fingerprint_length=xcd_train.shape[1])
+    baseline_model_att_cn = simple_attention(fingerprint_length=xcn_train.shape[1])
+    baseline_model_att_kc = simple_attention(fingerprint_length=xkc_train.shape[1])
+    baseline_model_att_ce = simple_attention(fingerprint_length=xce_train.shape[1])
+    baseline_model_att_sc = simple_attention(fingerprint_length=xsc_train.shape[1])
+    baseline_model_att_ac = simple_attention(fingerprint_length=xac_train.shape[1])
+    baseline_model_att_ma = simple_attention(fingerprint_length=xma_train.shape[1])
+    baseline_model_att_at.fit(xat_train_split, yat_train_split, validation_data=(xat_val_split, yat_val_split), epochs=20, batch_size=32)
+    baseline_model_att_es.fit(xes_train_split, yes_train_split, validation_data=(xes_val_split, yes_val_split), epochs=20, batch_size=32)
+    baseline_model_att_ke.fit(xke_train_split, yke_train_split, validation_data=(xke_val_split, yke_val_split), epochs=20, batch_size=32)
+    baseline_model_att_pc.fit(xpc_train_split, ypc_train_split, validation_data=(xpc_val_split, ypc_val_split), epochs=20, batch_size=32)
+    baseline_model_att_ss.fit(xss_train_split, yss_train_split, validation_data=(xss_val_split, yss_val_split), epochs=20, batch_size=32)
+    baseline_model_att_cd.fit(xcd_train_split, ycd_train_split, validation_data=(xcd_val_split, ycd_val_split), epochs=20, batch_size=32)
+    baseline_model_att_cn.fit(xcn_train_split, ycn_train_split, validation_data=(xcn_val_split, ycn_val_split), epochs=20, batch_size=32)
+    baseline_model_att_kc.fit(xkc_train_split, ykc_train_split, validation_data=(xkc_val_split, ykc_val_split), epochs=20, batch_size=32)
+    baseline_model_att_ce.fit(xce_train_split, yce_train_split, validation_data=(xce_val_split, yce_val_split), epochs=20, batch_size=32)
+    baseline_model_att_sc.fit(xsc_train_split, ysc_train_split, validation_data=(xsc_val_split, ysc_val_split), epochs=20, batch_size=32)
+    baseline_model_att_ac.fit(xac_train_split, yac_train_split, validation_data=(xac_val_split, yac_val_split), epochs=20, batch_size=32)
+    baseline_model_att_ma.fit(xma_train_split, yma_train_split, validation_data=(xma_val_split, yma_val_split), epochs=20, batch_size=32)
     
     # Save the trained models
-    baseline_model_satt_at.save(os.path.join(name, "baseline_model_satt_at.keras"))
-    baseline_model_satt_es.save(os.path.join(name, "baseline_model_satt_es.keras"))
-    baseline_model_satt_ke.save(os.path.join(name, "baseline_model_satt_ke.keras"))
-    baseline_model_satt_pc.save(os.path.join(name, "baseline_model_satt_pc.keras"))
-    baseline_model_satt_ss.save(os.path.join(name, "baseline_model_satt_ss.keras"))
-    baseline_model_satt_cd.save(os.path.join(name, "baseline_model_satt_cd.keras"))
-    baseline_model_satt_cn.save(os.path.join(name, "baseline_model_satt_cn.keras"))
-    baseline_model_satt_kc.save(os.path.join(name, "baseline_model_satt_kc.keras"))
-    baseline_model_satt_ce.save(os.path.join(name, "baseline_model_satt_ce.keras"))
-    baseline_model_satt_sc.save(os.path.join(name, "baseline_model_satt_sc.keras"))
-    baseline_model_satt_ac.save(os.path.join(name, "baseline_model_satt_ac.keras"))
-    baseline_model_satt_ma.save(os.path.join(name, "baseline_model_satt_ma.keras"))
+    baseline_model_att_at.save(os.path.join(name, "baseline_model_satt_at.keras"))
+    baseline_model_att_es.save(os.path.join(name, "baseline_model_satt_es.keras"))
+    baseline_model_att_ke.save(os.path.join(name, "baseline_model_satt_ke.keras"))
+    baseline_model_att_pc.save(os.path.join(name, "baseline_model_satt_pc.keras"))
+    baseline_model_att_ss.save(os.path.join(name, "baseline_model_satt_ss.keras"))
+    baseline_model_att_cd.save(os.path.join(name, "baseline_model_satt_cd.keras"))
+    baseline_model_att_cn.save(os.path.join(name, "baseline_model_satt_cn.keras"))
+    baseline_model_att_kc.save(os.path.join(name, "baseline_model_satt_kc.keras"))
+    baseline_model_att_ce.save(os.path.join(name, "baseline_model_satt_ce.keras"))
+    baseline_model_att_sc.save(os.path.join(name, "baseline_model_satt_sc.keras"))
+    baseline_model_att_ac.save(os.path.join(name, "baseline_model_satt_ac.keras"))
+    baseline_model_att_ma.save(os.path.join(name, "baseline_model_satt_ma.keras"))
     # Predict with attention models
-    yat_prob_satt_train, yat_pred_satt_train, yat_metric_satt_train = y_prediction(   baseline_model_satt_at, xat_train_np, xat_train, y_train, "yat_pred_satt")
-    yes_prob_satt_train, yes_pred_satt_train, yes_metric_satt_train = y_prediction(   baseline_model_satt_es, xes_train_np, xes_train, y_train, "yes_pred_satt")
-    yke_prob_satt_train, yke_pred_satt_train, yke_metric_satt_train = y_prediction(   baseline_model_satt_ke, xke_train_np, xke_train, y_train, "yke_pred_satt")
-    ypc_prob_satt_train, ypc_pred_satt_train, ypc_metric_satt_train = y_prediction(   baseline_model_satt_pc, xpc_train_np, xpc_train, y_train, "ypc_pred_satt")
-    yss_prob_satt_train, yss_pred_satt_train, yss_metric_satt_train = y_prediction(   baseline_model_satt_ss, xss_train_np, xss_train, y_train, "yss_pred_satt")
-    ycd_prob_satt_train, ycd_pred_satt_train, ycd_metric_satt_train = y_prediction(   baseline_model_satt_cd, xcd_train_np, xcd_train, y_train, "ycd_pred_satt")
-    ycn_prob_satt_train, ycn_pred_satt_train, ycn_metric_satt_train = y_prediction(   baseline_model_satt_cn, xcn_train_np, xcn_train, y_train, "ycn_pred_satt")
-    ykc_prob_satt_train, ykc_pred_satt_train, ykc_metric_satt_train = y_prediction(   baseline_model_satt_kc, xkc_train_np, xkc_train, y_train, "ykc_pred_satt")
-    yce_prob_satt_train, yce_pred_satt_train, yce_metric_satt_train = y_prediction(   baseline_model_satt_ce, xce_train_np, xce_train, y_train, "yce_pred_satt")
-    ysc_prob_satt_train, ysc_pred_satt_train, ysc_metric_satt_train = y_prediction(   baseline_model_satt_sc, xsc_train_np, xsc_train, y_train, "ysc_pred_satt")
-    yac_prob_satt_train, yac_pred_satt_train, yac_metric_satt_train = y_prediction(   baseline_model_satt_ac, xac_train_np, xac_train, y_train, "yac_pred_satt")
-    yma_prob_satt_train, yma_pred_satt_train, yma_metric_satt_train = y_prediction(   baseline_model_satt_ma, xma_train_np, xma_train, y_train, "yma_pred_satt")
-    yat_prob_satt_test, yat_pred_satt_test,  yat_metric_satt_test   = y_prediction(  baseline_model_satt_at, xat_test_np, xat_test, y_test,   "yat_pred_satt")
-    yes_prob_satt_test, yes_pred_satt_test,  yes_metric_satt_test   = y_prediction(  baseline_model_satt_es, xes_test_np, xes_test, y_test,   "yes_pred_satt")
-    yke_prob_satt_test, yke_pred_satt_test,  yke_metric_satt_test   = y_prediction(  baseline_model_satt_ke, xke_test_np, xke_test, y_test,   "yke_pred_satt")
-    ypc_prob_satt_test, ypc_pred_satt_test,  ypc_metric_satt_test   = y_prediction(  baseline_model_satt_pc, xpc_test_np, xpc_test, y_test,   "ypc_pred_satt")
-    yss_prob_satt_test, yss_pred_satt_test,  yss_metric_satt_test   = y_prediction(  baseline_model_satt_ss, xss_test_np, xss_test, y_test,   "yss_pred_satt")
-    ycd_prob_satt_test, ycd_pred_satt_test,  ycd_metric_satt_test   = y_prediction(  baseline_model_satt_cd, xcd_test_np, xcd_test, y_test,   "ycd_pred_satt")
-    ycn_prob_satt_test, ycn_pred_satt_test,  ycn_metric_satt_test   = y_prediction(  baseline_model_satt_cn, xcn_test_np, xcn_test, y_test,   "ycn_pred_satt")
-    ykc_prob_satt_test, ykc_pred_satt_test,  ykc_metric_satt_test   = y_prediction(  baseline_model_satt_kc, xkc_test_np, xkc_test, y_test,   "ykc_pred_satt")
-    yce_prob_satt_test, yce_pred_satt_test,  yce_metric_satt_test   = y_prediction(  baseline_model_satt_ce, xce_test_np, xce_test, y_test,   "yce_pred_satt")
-    ysc_prob_satt_test, ysc_pred_satt_test,  ysc_metric_satt_test   = y_prediction(  baseline_model_satt_sc, xsc_test_np, xsc_test, y_test,   "ysc_pred_satt")
-    yac_prob_satt_test, yac_pred_satt_test,  yac_metric_satt_test   = y_prediction(  baseline_model_satt_ac, xac_test_np, xac_test, y_test,   "yac_pred_satt")
-    yma_prob_satt_test, yma_pred_satt_test,  yma_metric_satt_test   = y_prediction(  baseline_model_satt_ma, xma_test_np, xma_test, y_test,   "yma_pred_satt")
+    yat_prob_att_train, yat_pred_att_train, yat_metric_att_train = y_prediction(   baseline_model_att_at, xat_train_np, xat_train, y_train, "yat_pred_att")
+    yes_prob_att_train, yes_pred_att_train, yes_metric_att_train = y_prediction(   baseline_model_att_es, xes_train_np, xes_train, y_train, "yes_pred_att")
+    yke_prob_att_train, yke_pred_att_train, yke_metric_att_train = y_prediction(   baseline_model_att_ke, xke_train_np, xke_train, y_train, "yke_pred_att")
+    ypc_prob_att_train, ypc_pred_att_train, ypc_metric_att_train = y_prediction(   baseline_model_att_pc, xpc_train_np, xpc_train, y_train, "ypc_pred_att")
+    yss_prob_att_train, yss_pred_att_train, yss_metric_att_train = y_prediction(   baseline_model_att_ss, xss_train_np, xss_train, y_train, "yss_pred_att")
+    ycd_prob_att_train, ycd_pred_att_train, ycd_metric_att_train = y_prediction(   baseline_model_att_cd, xcd_train_np, xcd_train, y_train, "ycd_pred_att")
+    ycn_prob_att_train, ycn_pred_att_train, ycn_metric_att_train = y_prediction(   baseline_model_att_cn, xcn_train_np, xcn_train, y_train, "ycn_pred_att")
+    ykc_prob_att_train, ykc_pred_att_train, ykc_metric_att_train = y_prediction(   baseline_model_att_kc, xkc_train_np, xkc_train, y_train, "ykc_pred_att")
+    yce_prob_att_train, yce_pred_att_train, yce_metric_att_train = y_prediction(   baseline_model_att_ce, xce_train_np, xce_train, y_train, "yce_pred_att")
+    ysc_prob_att_train, ysc_pred_att_train, ysc_metric_att_train = y_prediction(   baseline_model_att_sc, xsc_train_np, xsc_train, y_train, "ysc_pred_att")
+    yac_prob_att_train, yac_pred_att_train, yac_metric_att_train = y_prediction(   baseline_model_att_ac, xac_train_np, xac_train, y_train, "yac_pred_att")
+    yma_prob_att_train, yma_pred_att_train, yma_metric_att_train = y_prediction(   baseline_model_att_ma, xma_train_np, xma_train, y_train, "yma_pred_att")
+    yat_prob_att_test, yat_pred_att_test,  yat_metric_att_test   = y_prediction(  baseline_model_att_at, xat_test_np, xat_test, y_test,   "yat_pred_att")
+    yes_prob_att_test, yes_pred_att_test,  yes_metric_att_test   = y_prediction(  baseline_model_att_es, xes_test_np, xes_test, y_test,   "yes_pred_att")
+    yke_prob_att_test, yke_pred_att_test,  yke_metric_att_test   = y_prediction(  baseline_model_att_ke, xke_test_np, xke_test, y_test,   "yke_pred_att")
+    ypc_prob_att_test, ypc_pred_att_test,  ypc_metric_att_test   = y_prediction(  baseline_model_att_pc, xpc_test_np, xpc_test, y_test,   "ypc_pred_att")
+    yss_prob_att_test, yss_pred_att_test,  yss_metric_att_test   = y_prediction(  baseline_model_att_ss, xss_test_np, xss_test, y_test,   "yss_pred_att")
+    ycd_prob_att_test, ycd_pred_att_test,  ycd_metric_att_test   = y_prediction(  baseline_model_att_cd, xcd_test_np, xcd_test, y_test,   "ycd_pred_att")
+    ycn_prob_att_test, ycn_pred_att_test,  ycn_metric_att_test   = y_prediction(  baseline_model_att_cn, xcn_test_np, xcn_test, y_test,   "ycn_pred_att")
+    ykc_prob_att_test, ykc_pred_att_test,  ykc_metric_att_test   = y_prediction(  baseline_model_att_kc, xkc_test_np, xkc_test, y_test,   "ykc_pred_att")
+    yce_prob_att_test, yce_pred_att_test,  yce_metric_att_test   = y_prediction(  baseline_model_att_ce, xce_test_np, xce_test, y_test,   "yce_pred_att")
+    ysc_prob_att_test, ysc_pred_att_test,  ysc_metric_att_test   = y_prediction(  baseline_model_att_sc, xsc_test_np, xsc_test, y_test,   "ysc_pred_att")
+    yac_prob_att_test, yac_pred_att_test,  yac_metric_att_test   = y_prediction(  baseline_model_att_ac, xac_test_np, xac_test, y_test,   "yac_pred_att")
+    yma_prob_att_test, yma_pred_att_test,  yma_metric_att_test   = y_prediction(  baseline_model_att_ma, xma_test_np, xma_test, y_test,   "yma_pred_att")
     
     # Stack the predictive features
-    stack_train_prob_all = pd.concat([yat_prob_cnn_train, yat_prob_bilstm_train, yat_prob_satt_train,
-                            yes_prob_cnn_train, yes_prob_bilstm_train, yes_prob_satt_train,
-                            yke_prob_cnn_train, yke_prob_bilstm_train, yke_prob_satt_train,
-                            ypc_prob_cnn_train, ypc_prob_bilstm_train, ypc_prob_satt_train,
-                            yss_prob_cnn_train, yss_prob_bilstm_train, yss_prob_satt_train,
-                            ycd_prob_cnn_train, ycd_prob_bilstm_train, ycd_prob_satt_train,
-                            ycn_prob_cnn_train, ycn_prob_bilstm_train, ycn_prob_satt_train,
-                            ykc_prob_cnn_train, ykc_prob_bilstm_train, ykc_prob_satt_train,
-                            yce_prob_cnn_train, yce_prob_bilstm_train, yce_prob_satt_train,
-                            ysc_prob_cnn_train, ysc_prob_bilstm_train, ysc_prob_satt_train,
-                            yac_prob_cnn_train, yac_prob_bilstm_train, yac_prob_satt_train,
-                            yma_prob_cnn_train, yma_prob_bilstm_train, yma_prob_satt_train],  axis=1)
-    stack_test_prob_all  = pd.concat([yat_prob_cnn_test, yat_prob_bilstm_test, yat_prob_satt_test,
-                            yes_prob_cnn_test, yes_prob_bilstm_test, yes_prob_satt_test,
-                            yke_prob_cnn_test, yke_prob_bilstm_test, yke_prob_satt_test,
-                            ypc_prob_cnn_test, ypc_prob_bilstm_test, ypc_prob_satt_test,
-                            yss_prob_cnn_test, yss_prob_bilstm_test, yss_prob_satt_test,
-                            ycd_prob_cnn_test, ycd_prob_bilstm_test, ycd_prob_satt_test,
-                            ycn_prob_cnn_test, ycn_prob_bilstm_test, ycn_prob_satt_test,
-                            ykc_prob_cnn_test, ykc_prob_bilstm_test, ykc_prob_satt_test,
-                            yce_prob_cnn_test, yce_prob_bilstm_test, yce_prob_satt_test,
-                            ysc_prob_cnn_test, ysc_prob_bilstm_test, ysc_prob_satt_test,
-                            yac_prob_cnn_test, yac_prob_bilstm_test, yac_prob_satt_test,
-                            yma_prob_cnn_test, yma_prob_bilstm_test, yma_prob_satt_test],  axis=1)
-    stack_test_pred_all  = pd.concat([yat_pred_cnn_test, yat_pred_bilstm_test, yat_pred_satt_test,
-                        yes_pred_cnn_test, yes_pred_bilstm_test, yes_pred_satt_test,
-                        yke_pred_cnn_test, yke_pred_bilstm_test, yke_pred_satt_test,
-                        ypc_pred_cnn_test, ypc_pred_bilstm_test, ypc_pred_satt_test,
-                        yss_pred_cnn_test, yss_pred_bilstm_test, yss_pred_satt_test,
-                        ycd_pred_cnn_test, ycd_pred_bilstm_test, ycd_pred_satt_test,
-                        ycn_pred_cnn_test, ycn_pred_bilstm_test, ycn_pred_satt_test,
-                        ykc_pred_cnn_test, ykc_pred_bilstm_test, ykc_pred_satt_test,
-                        yce_pred_cnn_test, yce_pred_bilstm_test, yce_pred_satt_test,
-                        ysc_pred_cnn_test, ysc_pred_bilstm_test, ysc_pred_satt_test,
-                        yac_pred_cnn_test, yac_pred_bilstm_test, yac_pred_satt_test,
-                        yma_pred_cnn_test, yma_pred_bilstm_test, yma_pred_satt_test],  axis=1)
-    stack_train_pred_all  = pd.concat([yat_pred_cnn_train, yat_pred_bilstm_train, yat_pred_satt_train,
-                        yes_pred_cnn_train, yes_pred_bilstm_train, yes_pred_satt_train,
-                        yke_pred_cnn_train, yke_pred_bilstm_train, yke_pred_satt_train,
-                        ypc_pred_cnn_train, ypc_pred_bilstm_train, ypc_pred_satt_train,
-                        yss_pred_cnn_train, yss_pred_bilstm_train, yss_pred_satt_train,
-                        ycd_pred_cnn_train, ycd_pred_bilstm_train, ycd_pred_satt_train,
-                        ycn_pred_cnn_train, ycn_pred_bilstm_train, ycn_pred_satt_train,
-                        ykc_pred_cnn_train, ykc_pred_bilstm_train, ykc_pred_satt_train,
-                        yce_pred_cnn_train, yce_pred_bilstm_train, yce_pred_satt_train,
-                        ysc_pred_cnn_train, ysc_pred_bilstm_train, ysc_pred_satt_train,
-                        yac_pred_cnn_train, yac_pred_bilstm_train, yac_pred_satt_train,
-                        yma_pred_cnn_train, yma_pred_bilstm_train, yma_pred_satt_train],  axis=1)
-    stack_prob_train = pd.concat ([ypc_prob_satt_train, ysc_prob_cnn_train, ysc_prob_bilstm_train],  axis=1)
-    stack_prob_test = pd.concat ([ypc_prob_satt_test, ysc_prob_cnn_test, ysc_prob_bilstm_test],  axis=1)
-    stack_pred_train = pd.concat ([ypc_pred_satt_train, ysc_pred_cnn_train, ysc_pred_bilstm_train],  axis=1)
-    stack_pred_test = pd.concat ([ypc_pred_satt_test, ysc_pred_cnn_test, ysc_pred_bilstm_test],  axis=1)
+    stack_train_prob_all = pd.concat([yat_prob_cnn_train, yat_prob_bilstm_train, yat_prob_att_train,
+                            yes_prob_cnn_train, yes_prob_bilstm_train, yes_prob_att_train,
+                            yke_prob_cnn_train, yke_prob_bilstm_train, yke_prob_att_train,
+                            ypc_prob_cnn_train, ypc_prob_bilstm_train, ypc_prob_att_train,
+                            yss_prob_cnn_train, yss_prob_bilstm_train, yss_prob_att_train,
+                            ycd_prob_cnn_train, ycd_prob_bilstm_train, ycd_prob_att_train,
+                            ycn_prob_cnn_train, ycn_prob_bilstm_train, ycn_prob_att_train,
+                            ykc_prob_cnn_train, ykc_prob_bilstm_train, ykc_prob_att_train,
+                            yce_prob_cnn_train, yce_prob_bilstm_train, yce_prob_att_train,
+                            ysc_prob_cnn_train, ysc_prob_bilstm_train, ysc_prob_att_train,
+                            yac_prob_cnn_train, yac_prob_bilstm_train, yac_prob_att_train,
+                            yma_prob_cnn_train, yma_prob_bilstm_train, yma_prob_att_train],  axis=1)
+    stack_test_prob_all  = pd.concat([yat_prob_cnn_test, yat_prob_bilstm_test, yat_prob_att_test,
+                            yes_prob_cnn_test, yes_prob_bilstm_test, yes_prob_att_test,
+                            yke_prob_cnn_test, yke_prob_bilstm_test, yke_prob_att_test,
+                            ypc_prob_cnn_test, ypc_prob_bilstm_test, ypc_prob_att_test,
+                            yss_prob_cnn_test, yss_prob_bilstm_test, yss_prob_att_test,
+                            ycd_prob_cnn_test, ycd_prob_bilstm_test, ycd_prob_att_test,
+                            ycn_prob_cnn_test, ycn_prob_bilstm_test, ycn_prob_att_test,
+                            ykc_prob_cnn_test, ykc_prob_bilstm_test, ykc_prob_att_test,
+                            yce_prob_cnn_test, yce_prob_bilstm_test, yce_prob_att_test,
+                            ysc_prob_cnn_test, ysc_prob_bilstm_test, ysc_prob_att_test,
+                            yac_prob_cnn_test, yac_prob_bilstm_test, yac_prob_att_test,
+                            yma_prob_cnn_test, yma_prob_bilstm_test, yma_prob_att_test],  axis=1)
+    stack_test_pred_all  = pd.concat([yat_pred_cnn_test, yat_pred_bilstm_test, yat_pred_att_test,
+                        yes_pred_cnn_test, yes_pred_bilstm_test, yes_pred_att_test,
+                        yke_pred_cnn_test, yke_pred_bilstm_test, yke_pred_att_test,
+                        ypc_pred_cnn_test, ypc_pred_bilstm_test, ypc_pred_att_test,
+                        yss_pred_cnn_test, yss_pred_bilstm_test, yss_pred_att_test,
+                        ycd_pred_cnn_test, ycd_pred_bilstm_test, ycd_pred_att_test,
+                        ycn_pred_cnn_test, ycn_pred_bilstm_test, ycn_pred_att_test,
+                        ykc_pred_cnn_test, ykc_pred_bilstm_test, ykc_pred_att_test,
+                        yce_pred_cnn_test, yce_pred_bilstm_test, yce_pred_att_test,
+                        ysc_pred_cnn_test, ysc_pred_bilstm_test, ysc_pred_att_test,
+                        yac_pred_cnn_test, yac_pred_bilstm_test, yac_pred_att_test,
+                        yma_pred_cnn_test, yma_pred_bilstm_test, yma_pred_att_test],  axis=1)
+    stack_train_pred_all  = pd.concat([yat_pred_cnn_train, yat_pred_bilstm_train, yat_pred_att_train,
+                        yes_pred_cnn_train, yes_pred_bilstm_train, yes_pred_att_train,
+                        yke_pred_cnn_train, yke_pred_bilstm_train, yke_pred_att_train,
+                        ypc_pred_cnn_train, ypc_pred_bilstm_train, ypc_pred_att_train,
+                        yss_pred_cnn_train, yss_pred_bilstm_train, yss_pred_att_train,
+                        ycd_pred_cnn_train, ycd_pred_bilstm_train, ycd_pred_att_train,
+                        ycn_pred_cnn_train, ycn_pred_bilstm_train, ycn_pred_att_train,
+                        ykc_pred_cnn_train, ykc_pred_bilstm_train, ykc_pred_att_train,
+                        yce_pred_cnn_train, yce_pred_bilstm_train, yce_pred_att_train,
+                        ysc_pred_cnn_train, ysc_pred_bilstm_train, ysc_pred_att_train,
+                        yac_pred_cnn_train, yac_pred_bilstm_train, yac_pred_att_train,
+                        yma_pred_cnn_train, yma_pred_bilstm_train, yma_pred_att_train],  axis=1)
+    stack_prob_train = pd.concat ([ypc_prob_att_train, ysc_prob_cnn_train, ysc_prob_bilstm_train],  axis=1)
+    stack_prob_test = pd.concat ([ypc_prob_att_test, ysc_prob_cnn_test, ysc_prob_bilstm_test],  axis=1)
+    stack_pred_train = pd.concat ([ypc_pred_att_train, ysc_pred_cnn_train, ysc_pred_bilstm_train],  axis=1)
+    stack_pred_test = pd.concat ([ypc_pred_att_test, ysc_pred_cnn_test, ysc_pred_bilstm_test],  axis=1)
 
     stack_train_prob_all.to_csv(os.path.join(name, "all_stacked_train_prob.csv"))
     stack_test_prob_all.to_csv(os.path.join(name, "all_stacked_test_prob.csv"))
@@ -485,30 +485,30 @@ def stacked_class(name):
     y_pred_stk_test.to_csv(os.path.join( name, "y_pred_test.csv"))
 
     # Combine performance metrics
-    metric_train= pd.concat([yat_metric_cnn_train, yat_metric_bilstm_train, yat_metric_satt_train,
-                            yes_metric_cnn_train, yes_metric_bilstm_train, yes_metric_satt_train,
-                            yke_metric_cnn_train, yke_metric_bilstm_train, yke_metric_satt_train,
-                            ypc_metric_cnn_train, ypc_metric_bilstm_train, ypc_metric_satt_train,
-                            yss_metric_cnn_train, yss_metric_bilstm_train, yss_metric_satt_train,
-                            ycd_metric_cnn_train, ycd_metric_bilstm_train, ycd_metric_satt_train,
-                            ycn_metric_cnn_train, ycn_metric_bilstm_train, ycn_metric_satt_train,
-                            ykc_metric_cnn_train, ykc_metric_bilstm_train, ykc_metric_satt_train,
-                            yce_metric_cnn_train, yce_metric_bilstm_train, yce_metric_satt_train,
-                            ysc_metric_cnn_train, ysc_metric_bilstm_train, ysc_metric_satt_train,
-                            yac_metric_cnn_train, yac_metric_bilstm_train, yac_metric_satt_train,
-                            yma_metric_cnn_train, yma_metric_bilstm_train, yma_metric_satt_train, y_metric_stk_train],  axis=0)
-    metric_test= pd.concat([yat_metric_cnn_test, yat_metric_bilstm_test, yat_metric_satt_test,
-                            yes_metric_cnn_test, yes_metric_bilstm_test, yes_metric_satt_test,
-                            yke_metric_cnn_test, yke_metric_bilstm_test, yke_metric_satt_test,
-                            ypc_metric_cnn_test, ypc_metric_bilstm_test, ypc_metric_satt_test,
-                            yss_metric_cnn_test, yss_metric_bilstm_test, yss_metric_satt_test,
-                            ycd_metric_cnn_test, ycd_metric_bilstm_test, ycd_metric_satt_test,
-                            ycn_metric_cnn_test, ycn_metric_bilstm_test, ycn_metric_satt_test,
-                            ykc_metric_cnn_test, ykc_metric_bilstm_test, ykc_metric_satt_test,
-                            yce_metric_cnn_test, yce_metric_bilstm_test, yce_metric_satt_test,
-                            ysc_metric_cnn_test, ysc_metric_bilstm_test, ysc_metric_satt_test,
-                            yac_metric_cnn_test, yac_metric_bilstm_test, yac_metric_satt_test,
-                            yma_metric_cnn_test, yma_metric_bilstm_test, yma_metric_satt_test, y_metric_stk_test],  axis=0)
+    metric_train= pd.concat([yat_metric_cnn_train, yat_metric_bilstm_train, yat_metric_att_train,
+                            yes_metric_cnn_train, yes_metric_bilstm_train, yes_metric_att_train,
+                            yke_metric_cnn_train, yke_metric_bilstm_train, yke_metric_att_train,
+                            ypc_metric_cnn_train, ypc_metric_bilstm_train, ypc_metric_att_train,
+                            yss_metric_cnn_train, yss_metric_bilstm_train, yss_metric_att_train,
+                            ycd_metric_cnn_train, ycd_metric_bilstm_train, ycd_metric_att_train,
+                            ycn_metric_cnn_train, ycn_metric_bilstm_train, ycn_metric_att_train,
+                            ykc_metric_cnn_train, ykc_metric_bilstm_train, ykc_metric_att_train,
+                            yce_metric_cnn_train, yce_metric_bilstm_train, yce_metric_att_train,
+                            ysc_metric_cnn_train, ysc_metric_bilstm_train, ysc_metric_att_train,
+                            yac_metric_cnn_train, yac_metric_bilstm_train, yac_metric_att_train,
+                            yma_metric_cnn_train, yma_metric_bilstm_train, yma_metric_att_train, y_metric_stk_train],  axis=0)
+    metric_test= pd.concat([yat_metric_cnn_test, yat_metric_bilstm_test, yat_metric_att_test,
+                            yes_metric_cnn_test, yes_metric_bilstm_test, yes_metric_att_test,
+                            yke_metric_cnn_test, yke_metric_bilstm_test, yke_metric_att_test,
+                            ypc_metric_cnn_test, ypc_metric_bilstm_test, ypc_metric_att_test,
+                            yss_metric_cnn_test, yss_metric_bilstm_test, yss_metric_att_test,
+                            ycd_metric_cnn_test, ycd_metric_bilstm_test, ycd_metric_att_test,
+                            ycn_metric_cnn_test, ycn_metric_bilstm_test, ycn_metric_att_test,
+                            ykc_metric_cnn_test, ykc_metric_bilstm_test, ykc_metric_att_test,
+                            yce_metric_cnn_test, yce_metric_bilstm_test, yce_metric_att_test,
+                            ysc_metric_cnn_test, ysc_metric_bilstm_test, ysc_metric_att_test,
+                            yac_metric_cnn_test, yac_metric_bilstm_test, yac_metric_att_test,
+                            yma_metric_cnn_test, yma_metric_bilstm_test, yma_metric_att_test, y_metric_stk_test],  axis=0)
     metric_train.to_csv(os.path.join( name, "metric_train.csv"))
     metric_test.to_csv(os.path.join( name, "metric_test.csv"))
 

@@ -1,0 +1,35 @@
+LigandID,SMILES
+Dimethyl-trisulphide,CSSSC
+3-Butenyl isothiocyanate,C=CCCN=C=S
+Isothiocyanates 3-Phenylpropyl,S=C=NCCCC1=CC=CC=C1
+Isothiocyanates 7-Methylthioheptyl,CSCCCCCCCN=C=S
+Isothiocyanates 1-Pentyl,CCCCCN=C=S
+Isothiocyanates 3-Methoxypropyl,COCCCN=C=S
+Isothiocyanates 4-Hydroxybenzyl,CC1=CC=C(CN=C=S)C=C1
+Isothiocyanates Allyl,C=CCN=C=S
+Isothiocyanates Butyl,CCCCN=C=S
+Isothiocyanates 4-(Methanesulfonyl)butyl (Erysolin),CS(=O)(=O)CCCCN=C=S
+Isothiocyanates 4-Methylthio-3-butenyl (Raphasatin),CS\C(C)=C(/C)CCN=C=S
+Isothiocyanates 4-(Methylsulphinyl) butyl (Sulforaphane),CS(=O)CCCCN=C=S
+Isothiocyanates 4-(Methylsulphinyl) butane (Sulforaphene),CS(=O)\C=C\CCN=C=S
+Glucosinolates Butyl,CCCC\C(S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)=N\OS([O-])(=O)=O
+Glucosinolates 3-Methylsulphinylpropyl (Glucoiberin),CS(=O)CCC\C(S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)=N\OS([O-])(=O)=O
+Glucosinolates 2-Hydroxy-4-pentenyl (Gluconapoleiferin),OC[C@H]1O[C@@H](S\C(CC(O)CC=C)=N/OS([O-])(=O)=O)[C@H](O)[C@@H](O)[C@@H]1O
+Glucosinolates 4-Methylsulphinylbutyl (Glucoraphanin),CS(=O)CCCC\C(S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)=N\OS([O-])(=O)=O
+Glucosinolates 4-Pentenyl (Glucobrassicanapin),OC[C@H]1O[C@@H](S\C(CCCC=C)=N/OS([O-])(=O)=O)[C@H](O)[C@@H](O)[C@@H]1O
+Glucosinolates 3-Indolylmethyl (Glucobrassicin),OC[C@H]1O[C@@H](S\C(CC2=CC3=C(N2)C=CC=C3)=N/OS([O-])(=O)=O)[C@H](O)[C@@H](O)[C@@H]1O
+Thiocyanate Axisothiocyanate-3,CC(C)[C@@H]1CC[C@@H](C)[C@]2(CCC(C)=C2)[C@@H]1N=C=S
+2-Hydroxycyclohexyl thiocyanate,OC1CCCCC1SC#N
+2-Oxazolidinethione (Goitrin),C=CC1CNC(=S)O1
+3-Indolecarbinol,C1=CC=C2C(=C1)C(=CN2)CO
+3-Indoleacetonitrile,C1=CC=C2C(=C1)C(=CN2)CC#N
+2-Indolecarboxylic acid,C1=CC=C2C(=C1)C=C(N2)C(=O)O
+Methoxybrassinin,CON1C=C(C2=CC=CC=C21)CNC(=S)SC
+N-Methoxyspirobrassinol,CON1C(C2(CN=C(S2)SC)C3=CC=CC=C31)O
+(-)-Dioxibrassinin,CSC(=S)NC[C@]1(O)C(=O)NC2=C1C=CC=C2
+Cabbage identification factor 2,OC(=O)CNC(=O)C1CSC2=NC=C3C(=NC4=CC=CC=C34)N12
+Broussoflavan A,CC(C)=CCC1=C(O)C2=C(C=C1[C@@H]1CCC3=C(O1)C=C(O)C=C3)C(O)C(O)C(C)(C)O2
+Broussoflavonol G,CC(=CCC1=C(C(=C(C=C1C2=C(C(=O)C3=C(C=C(C(=C3O2)CC=C(C)C)O)O)O)O)O)CC=C(C)C)C
+Broussoflavonol D,CC(C)=CCC1=C2C=CC(C)(C)OC2=C(O)C=C1C1=C(O)C(=O)C2=C(O1)C(=C(O)C=C2O)C(C)(C)C=C
+Glaucarubinone,CC[C@](C)(O)C(=O)O[C@@H]1[C@H]2[C@@H](C)[C@@H](O)[C@]3(O)OC[C@@]22[C@H]3[C@@]3(C)[C@H](O)C(=O)C=C(C)[C@@H]3C[C@H]2OC1=O
+Butyl 1-(methylthio) propyl disulphide,CCCCSSC(CC)SC
