@@ -1,6 +1,6 @@
 # **Stacking Ensemble Neural Network for Chemical Safety Assessment: A Case Study of Thyroid Peroxidase and Natural Product Screening**
 
-![Sample Figure](meta_neuralnet_graph.png)
+![Sample Figure](meta_neuralnet_graphic.png)
 
 ### Darlene Nabila Zetta*, Tarapong Srisongkram**
 *Graduate School in the Program of Pharmaceutical Sciences, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (darlenenabilazetta.d@kkumail.com)
@@ -8,6 +8,8 @@
 **Division of Pharmaceutical Chemistry, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (tarasri@kku.ac.th)
 
 Read full paper published in **Journal of Chemical Information and Modeling**.
+
+Due to file size limitations, large model files are hosted on Google Drive and can be accessed via this link: https://drive.google.com/drive/folders/1UiWCCE6my0TKdZoYTR7JUVGU1-quhWDd?usp=sharing
 
 ### MIT License
 Copyright (c) [2025] [Dr.Tarapong Srisongram]
