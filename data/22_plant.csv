@@ -1,23 +1,23 @@
-LigandID,SMILES,ID,Experiment
-Thiocyanate,C(#N)[S-],CHEBI:18022,
-Isothiocyanic acid,C(=N)=S,CHEMBL1161685,
-Goitrin,C=CC1CNC(=S)O1,CHEMBL508652,
-Quercetin,C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O,CHEMBL50,in vitro
-Kaempferol,C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O,CHEMBL150,in vitro
-Myricetin,C1=C(C=C(C(=C1O)O)O)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL164,in vitro
-Mearnsitrin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC2=C(OC3=CC(=CC(=C3C2=O)O)O)C4=CC(=C(C(=C4)O)OC)O)O)O)O,CHEMBL3109438,in vitro
-Rutin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O,CHEMBL226335,in vitro
-Apigenin,C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL28,in vitro
-Catechin,C1[C@@H]([C@H](OC2=CC(=CC(=C21)O)O)C3=CC(=C(C=C3)O)O)O,CHEMBL311498,in vitro/in vivo
-Genistein,C1=CC(=CC=C1C2=COC3=CC(=CC(=C3C2=O)O)O)O,CHEMBL44,in vivo
-Daidzein,C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)O)O,CHEMBL8145,in vivo
-Resveratrol,C1=CC(=CC=C1/C=C/C2=CC(=CC(=C2)O)O)O,CHEMBL165,in vitro/in vivo
-Sinapic acid,COC1=CC(=CC(=C1O)OC)/C=C/C(=O)O,CHEMBL109341,in vitro/in vivo
-Chlorogenic acid,C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,CHEMBL284616,in vitro/in vivo
-Rosmarinic acid,C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,CHEMBL324842,in vitro/in vivo
-Naringin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC=C(C=C5)O)O)CO)O)O)O)O)O,CHEMBL451532,
-Baicalein,C1=CC=C(C=C1)C2=CC(=O)C3=C(O2)C=C(C(=C3O)O)O,CHEMBL8260,
-Fisetin,C1=CC(=C(C=C1C2=C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O,CHEMBL31574,
-Biochanin A,COC1=CC=C(C=C1)C2=COC3=CC(=CC(=C3C2=O)O)O,CHEMBL131921,
-Naringenin,C1[C@H](OC2=CC(=CC(=C2C1=O)O)O)C3=CC=C(C=C3)O,CHEMBL9352,
-Morin,C1=CC(=C(C=C1O)O)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL28626,
+LigandID,SMILES,ID
+Thiocyanate,C(#N)[S-],CHEBI:18022
+Isothiocyanic acid,C(=N)=S,CHEMBL1161685
+Goitrin,C=CC1CNC(=S)O1,CHEMBL508652
+Quercetin,C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O,CHEMBL50
+Kaempferol,C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O,CHEMBL150
+Myricetin,C1=C(C=C(C(=C1O)O)O)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL164
+Mearnsitrin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC2=C(OC3=CC(=CC(=C3C2=O)O)O)C4=CC(=C(C(=C4)O)OC)O)O)O)O,CHEMBL3109438
+Rutin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O,CHEMBL226335
+Apigenin,C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL28
+Catechin,C1[C@@H]([C@H](OC2=CC(=CC(=C21)O)O)C3=CC(=C(C=C3)O)O)O,CHEMBL311498
+Genistein,C1=CC(=CC=C1C2=COC3=CC(=CC(=C3C2=O)O)O)O,CHEMBL44
+Daidzein,C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)O)O,CHEMBL8145
+Resveratrol,C1=CC(=CC=C1/C=C/C2=CC(=CC(=C2)O)O)O,CHEMBL165
+Sinapic acid,COC1=CC(=CC(=C1O)OC)/C=C/C(=O)O,CHEMBL109341
+Chlorogenic acid,C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,CHEMBL284616
+Rosmarinic acid,C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,CHEMBL324842
+Naringin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC=C(C=C5)O)O)CO)O)O)O)O)O,CHEMBL451532
+Baicalein,C1=CC=C(C=C1)C2=CC(=O)C3=C(O2)C=C(C(=C3O)O)O,CHEMBL8260
+Fisetin,C1=CC(=C(C=C1C2=C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O,CHEMBL31574
+Biochanin A,COC1=CC=C(C=C1)C2=COC3=CC(=CC(=C3C2=O)O)O,CHEMBL131921
+Naringenin,C1[C@H](OC2=CC(=CC(=C2C1=O)O)O)C3=CC=C(C=C3)O,CHEMBL9352
+Morin,C1=CC(=C(C=C1O)O)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O,CHEMBL28626
