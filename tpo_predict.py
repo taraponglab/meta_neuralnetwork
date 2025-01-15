@@ -254,7 +254,7 @@ def print_AD(x_data, z=1.0):
     Parameters:
     - name (str): The directory where the pre-trained nearest neighbor model (`ad_2_1.0.joblib`) is stored.
     - x_data (DataFrame): The input data for which the AD status needs to be determined.
-    - z (float): The z-factor for scaling the applicability domain boundary. Default is 1.0.
+    - z (float): The z-factor for scaling the applicability domain boundary.
     
     Returns:
     - df (DataFrame): A DataFrame with one column, 'AD_status', indicating whether each sample is within or outside the applicability domain.

@@ -474,7 +474,7 @@ def stacked_class(name):
     x_train_stack, x_val_stack, y_train_stack, y_val_stack = train_test_split(stack_train_np, y_train, test_size=0.2, random_state=42)
     stacked_model = simple_attention(fingerprint_length=x_train_stack.shape[1])
     stacked_model.fit(x_train_stack,  y_train_stack, validation_data=(x_val_stack, y_val_stack), epochs=20, batch_size=32)
-    stacked_model.save(os.path.join(name, "stacked_model.keras"))
+    stacked_model.save(os.path.join(name, "meta_att_stacked_model.keras"))
 
     y_prob_stk_train, y_pred_stk_train, y_metric_stk_train = y_prediction(   stacked_model, stack_train_np, stack_prob_train, y_train, "y_pred_stacked")
     y_prob_stk_test, y_pred_stk_test, y_metric_stk_test   = y_prediction(   stacked_model, stack_test_np, stack_prob_test,  y_test,  "y_pred_stacked")
@@ -609,7 +609,7 @@ def run_ad(stacked_model, x_train, x_test, stack_test, y_test, name, z = 0.5):
     ax2.set_ylabel('Removed compounds', fontsize=12, fontstyle='italic', weight='bold')
     ax2.set_xticks(k_values)
     plt.tight_layout()
-    save_path = os.path.join(name, "3pfs_AD_TPO_"+ str(z)+ "_Classification_separated.svg")
+    save_path = os.path.join(name, "AD_TPO_"+ str(z)+ "_Classification_separated.svg")
     plt.savefig(save_path, bbox_inches='tight') 
     plt.close
 
@@ -747,7 +747,7 @@ def main():
         metric_test = metric_test.set_index('Unnamed: 0')
         y_random(stack_train, stack_test, y_train, y_test, metric_train, metric_test, name)
         print("Finish y-randomization ", name)
-        stacked_model =  load_model(os.path.join(name, "stacked_model.keras"))
+        stacked_model =  load_model(os.path.join(name, "meta_att_stacked_model.keras"))
         z_values = [0.5, 1.0, 1.5, 2.0, 2.5]
         for z in z_values:
             run_ad(stacked_model, stack_train, stack_test, y_test, name, z=z)
