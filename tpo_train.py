@@ -737,7 +737,7 @@ def main():
         y_train  = pd.read_csv(os.path.join(name, "train", "y_train.csv"), index_col=0)
         y_test   = pd.read_csv(os.path.join(name, "test", "y_test.csv" ), index_col=0)
         print(y_train)
-        #stacked_model, stack_train, stack_test, metric_train, metric_test = stacked_class(name)
+        stacked_model, stack_train, stack_test, metric_train, metric_test = stacked_class(name)
         print("Finish training model ", name)
         stack_train = pd.read_csv(os.path.join(name, "stacked_train_prob.csv"), index_col=0)
         stack_test  = pd.read_csv(os.path.join(name, "stacked_test_prob.csv"), index_col=0)
@@ -745,7 +745,7 @@ def main():
         metric_test = pd.read_csv(os.path.join( name, "metric_test.csv"))
         metric_train = metric_train.set_index('Unnamed: 0')
         metric_test = metric_test.set_index('Unnamed: 0')
-        #y_random(stack_train, stack_test, y_train, y_test, metric_train, metric_test, name)
+        y_random(stack_train, stack_test, y_train, y_test, metric_train, metric_test, name)
         print("Finish y-randomization ", name)
         stacked_model =  load_model(os.path.join(name, "meta_att_stacked_model.keras"))
         z_values = [0.5, 1.0, 1.5, 2.0, 2.5]
