@@ -514,12 +514,11 @@ def stacked_class(name):
 
     return stacked_model, stack_prob_train, stack_prob_test, metric_train, metric_test
 
-
 def nearest_neighbor_AD(x_train, x_test, name, k, z=0.5):
     from sklearn.neighbors import NearestNeighbors
     nn = NearestNeighbors(n_neighbors=k, algorithm='brute', metric='euclidean').fit(x_train)
     dump(nn, os.path.join(name, "ad_"+ str(k) +"_"+ str(z) +".joblib"))
-    distance, index = nn.kneighbors(x_test)
+    distance, index = nn.kneighbors(x_train)
     # Calculate mean and sd of distance in train set
     di = np.mean(distance, axis=1)
     # Find mean and sd of di
@@ -527,14 +526,18 @@ def nearest_neighbor_AD(x_train, x_test, name, k, z=0.5):
     sk = np.std(di)
     print('dk = ', dk)
     print('sk = ', sk)
+    # Calculate di of test set
+    distance, index = nn.kneighbors(x_test)
+    di= np.mean(distance, axis=1)
     AD_status = ['within_AD' if di[i] < dk + (z * sk) else 'outside_AD' for i in range(len(di))]
+    
     # Create DataFrame with index from x_test and the respective status
     df = pd.DataFrame(AD_status, index=x_test.index, columns=['AD_status'])
-    return df
+    return df, dk, sk
 
 def run_ad(stacked_model, x_train, x_test, stack_test, y_test, name, z = 0.5):
     # Initialize lists to store metrics for plotting
-    k_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    k_values = [3, 4, 5, 6, 7, 8, 9, 10]    #1, 2, 
     MCC_values = []
     ACC_values = []
     Sen_values = []
@@ -544,11 +547,13 @@ def run_ad(stacked_model, x_train, x_test, stack_test, y_test, name, z = 0.5):
     BA_values = []
     Prec_values = []
     removed_compounds_values = []
+    dk_values = []
+    sk_values = []
 
     # Remove outside AD
     for i in k_values:
         print('k = ', i, 'z=', str(z))
-        t = nearest_neighbor_AD(x_train, x_test, name, i, z=z)
+        t, dk, sk = nearest_neighbor_AD(x_train, x_test, name, i, z=z)
         print(t['AD_status'].value_counts())
         # Remove outside AD
         x_ad_test = stack_test[t['AD_status'] == 'within_AD']
@@ -580,6 +585,8 @@ def run_ad(stacked_model, x_train, x_test, stack_test, y_test, name, z = 0.5):
         BA_values.append(balanced_acc)
         Prec_values.append(prec)
         removed_compounds_values.append((t['AD_status'] == 'outside_AD').sum())
+        dk_values.append(dk)
+        sk_values.append(sk)
     k_values   = np.array(k_values)
     MCC_values = np.array(MCC_values)
     ACC_values = np.array(ACC_values)
@@ -590,6 +597,25 @@ def run_ad(stacked_model, x_train, x_test, stack_test, y_test, name, z = 0.5):
     BA_values  = np.array(BA_values)
     Prec_values = np.array(Prec_values)
     removed_compounds_values = np.array(removed_compounds_values)
+    dk_values = np.array(dk_values)
+    sk_values = np.array(sk_values)
+    # Save table
+    ad_metrics = pd.DataFrame({
+        "k": k_values[:len(MCC_values)],  # Adjust if some values are skipped
+        "Accuracy": ACC_values,
+        "Balanced Accuracy": BA_values,
+        "Sensitivity": Sen_values,
+        "Specificity": Spe_values,
+        "MCC": MCC_values,
+        "AUC": AUC_values,
+        "Precision": Prec_values,
+        "F1 Score": F1_values,
+        "Removed Compounds": removed_compounds_values,
+        "dk_values": dk_values,
+        "sk_values": sk_values
+    })
+    ad_metrics = round(ad_metrics, 3)
+    ad_metrics.to_csv("AD_metrics_"+name+"_"+ str(z)+ ".csv")
     # Plotting
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6, 3))
     ax1.plot(k_values, MCC_values, 'r^-', label = "MCC")
@@ -741,6 +767,7 @@ def main():
         print("Finish training model ", name)
         stack_train = pd.read_csv(os.path.join(name, "stacked_train_prob.csv"), index_col=0)
         stack_test  = pd.read_csv(os.path.join(name, "stacked_test_prob.csv"), index_col=0)
+        print (stack_test.shape)
         metric_train = pd.read_csv(os.path.join( name, "metric_train.csv"))
         metric_test = pd.read_csv(os.path.join( name, "metric_test.csv"))
         metric_train = metric_train.set_index('Unnamed: 0')
@@ -748,7 +775,7 @@ def main():
         y_random(stack_train, stack_test, y_train, y_test, metric_train, metric_test, name)
         print("Finish y-randomization ", name)
         stacked_model =  load_model(os.path.join(name, "meta_att_stacked_model.keras"))
-        z_values = [0.5, 1.0, 1.5, 2.0, 2.5]
+        z_values = [3.5, 4.0]
         x_train = pd.read_csv(os.path.join(name, "train",  'SubFPC.csv'   ), index_col=0)
         x_test  = pd.read_csv(os.path.join( name, "test",  'SubFPC.csv'   ), index_col=0)
         for z in z_values:

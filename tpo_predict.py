@@ -247,7 +247,7 @@ def load(name):
     y_prob_stk.to_csv(os.path.join( name, "y_prob_stack.csv"))
     y_pred_stk.to_csv(os.path.join( name, "y_pred_stack.csv"))
 
-def print_AD(x_data, z=1.0):
+def print_AD(x_data, z=2.5):
     """
     Evaluates the Applicability Domain (AD) of a dataset using a pre-trained nearest neighbor model.
 
@@ -260,11 +260,11 @@ def print_AD(x_data, z=1.0):
     - df (DataFrame): A DataFrame with one column, 'AD_status', indicating whether each sample is within or outside the applicability domain.
     """
     from joblib import load
-    nn = load(os.path.join("model", "ad_2_1.0.joblib"))
+    nn = load(os.path.join("model", "ad_7_2.5.joblib"))
     distance, index = nn.kneighbors(x_data)
     di = np.mean(distance, axis=1)
-    dk =  3.996860224905832
-    sk =  3.2921598852811003
+    dk =  4.497417768993063
+    sk =  2.953309991188386
     print('dk = ', dk)
     print('sk = ', sk)
     AD_status = ['within_AD' if di[i] < dk + (z * sk) else 'outside_AD' for i in range(len(di))]
@@ -274,7 +274,7 @@ def print_AD(x_data, z=1.0):
     print(df['AD_status'].value_counts())
     return df
 
-def evaluate_AD(stacked_model,  stack_data, x_data, name, z=1.0):
+def evaluate_AD(stacked_model,  stack_data, x_data, name, z=2.5):
     t = print_AD(x_data, z=z)
     print(t['AD_status'].value_counts())
     
@@ -310,7 +310,7 @@ def main():
         stacked_model = load_model(os.path.join("model", "meta_att_stacked_model.keras"))
         stack_data_prob = pd.read_csv(os.path.join(name, "stacked_data_prob.csv"), index_col=0)
         x_data = pd.read_csv(os.path.join(name, "SubFPC.csv"), index_col=0)
-        evaluate_AD(stacked_model, stack_data_prob, x_data, name, z=1.0)
+        evaluate_AD(stacked_model, stack_data_prob, x_data, name, z=2.5)
         print("Finish AD !")
         print("Finish TPO_predict !")
 
