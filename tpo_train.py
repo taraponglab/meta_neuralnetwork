@@ -775,7 +775,7 @@ def main():
         y_random(stack_train, stack_test, y_train, y_test, metric_train, metric_test, name)
         print("Finish y-randomization ", name)
         stacked_model =  load_model(os.path.join(name, "meta_att_stacked_model.keras"))
-        z_values = [3.5, 4.0]
+        z_values = [0.5, 1.0, 1.5, 2.0, 2.5]
         x_train = pd.read_csv(os.path.join(name, "train",  'SubFPC.csv'   ), index_col=0)
         x_test  = pd.read_csv(os.path.join( name, "test",  'SubFPC.csv'   ), index_col=0)
         for z in z_values:
